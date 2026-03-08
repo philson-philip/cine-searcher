@@ -1,2 +1,10 @@
+/* Neeto UI */
 @import "@bigbinary/neetoui";
+
+/* React Toastify */
 @import "react-toastify/dist/ReactToastify.min.css";
+
+/* Tailwind CSS */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
