@@ -81,3 +81,5 @@ yarn-debug.log*
 .yarnrc
 yarn-1.22.5.cjs
 yarn-1.22.5.js
+
+.env
