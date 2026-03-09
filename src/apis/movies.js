@@ -1,14 +1,14 @@
 import axios from "axios";
 
-const fetchMovies = async () => {
-  try {
-    const response = await axios.get(
-      "https://www.omdbapi.com/?i=tt3896198&apikey=95100530"
-    );
-    console.log("Api response", response);
-  } catch (error) {
-    console.error("Error fetching movies", error);
-  }
+const API_KEY = process.env.REACT_APP_OMDB_API_KEY;
+
+const getMovies = ({ searchTerm }) =>
+  axios.get(
+    `https://www.omdbapi.com/?i=tt3896198&apikey=${API_KEY}&s=${searchTerm}`
+  );
+
+const moviesApi = {
+  getMovies,
 };
 
-export default fetchMovies;
+export default moviesApi;
