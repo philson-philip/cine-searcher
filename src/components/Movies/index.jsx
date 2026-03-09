@@ -43,7 +43,7 @@ const Movies = () => {
           onChange={e => setSearchTerm(e.target.value)}
         />
       </header>
-      {loading ? (
+      {loading && isEmpty(movies) ? (
         <div className="flex h-80 items-center justify-center">
           <Spinner />
         </div>
@@ -52,7 +52,14 @@ const Movies = () => {
           {isEmpty(movies) ? (
             <p className="text-center text-gray-500">No movies found</p>
           ) : (
-            <MovieList movies={movies} />
+            <>
+              {loading && (
+                <div className="flex justify-center">
+                  <Spinner />
+                </div>
+              )}
+              <MovieList movies={movies} />
+            </>
           )}
         </div>
       )}
