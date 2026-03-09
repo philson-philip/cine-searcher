@@ -44,7 +44,7 @@ const Movies = () => {
         />
       </header>
       {loading ? (
-        <div className="h-100 flex items-center justify-center">
+        <div className="flex h-80 items-center justify-center">
           <Spinner />
         </div>
       ) : (
